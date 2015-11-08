@@ -1,0 +1,57 @@
+<?php /* Home page slider */ ?>
+
+<section class="slider-intro">
+  <!-- Home Slider Block -->
+  <div class="the-slideshow-wrapper-outer">
+    <div class="the-slideshow-wrapper">
+      <div class="slider-arrows2 slider-pagination2 pagination-pos-over-bottom-centered">
+        <div style="opacity: 1; display: block;" id="slideshow-2a8563bc02a4b60056d3d8725ac94351" class="slides owl-carousel owl-theme">
+          <div class="owl-item">
+            <div class="item slide" style="background-color: transparent; background-image: url('<?php echo $this->getSkinUrl('images/slider_img_2.jpg') ?>');background-position: center top; background-repeat: no-repeat; background-size: cover; height: 490px; width: 100%; position:relative">
+              <div class="caption light1 top-right">
+                <div class="caption-inner">
+                  <p class="normal-text"><?php echo $this->__('Collection 2014') ?></p>
+                  <h2 class="heading permanent"><?php echo $this->__('Whats new') ?> <br>
+                    <?php echo $this->__('this week') ?></h2>
+                  <p class="normal-text1"><?php echo $this->__('Over 90 new arrivals') ?></p>
+                  <p class="intro-btn"><a  href="#" title="<?php echo $this->__('Shop Now') ?>"><?php echo $this->__('Shop Now') ?></a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="owl-item">
+            <div class="item slide" style="background-color: transparent; background-image: url('<?php echo $this->getSkinUrl('images/slider_img_1.jpg') ?>');background-position: center top; background-repeat: no-repeat; background-size: cover; height: 490px; width: 100%; position:relative">
+              <div class="caption dark2">
+                <div class="caption-inner">
+                  <h2 class="heading"><?php echo $this->__('Fashion Season') ?></h2>
+                  <p class="permanent"><?php echo $this->__('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis dui odio...') ?></p>
+                  <p class="intro-btn"><a  href="#" title="<?php echo $this->__('Shop Now') ?>"><?php echo $this->__('Shop Now') ?></a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end: slides -->
+        </div>
+        <!-- end: the-slideshow -->
+      </div>
+      <!-- end: the-slideshow-wrapper -->
+    </div>
+    <!-- end: the-slideshow-wrapper-outer -->
+<script type="text/javascript">
+    jQuery(function($) {        
+        var owl = $('#slideshow-2a8563bc02a4b60056d3d8725ac94351');
+        owl.owlCarousel({
+            singleItem: true,
+            slideSpeed: 200,        
+            paginationSpeed: 500,        
+            autoPlay: 8000,        
+            stopOnHover: true,        
+            rewindNav: true,
+            rewindSpeed: 600,                
+            transitionStyle: 'fadeUp',        
+            navigation: true
+        }); //end: owl
+    });
+</script>
+  </div>
+</section>

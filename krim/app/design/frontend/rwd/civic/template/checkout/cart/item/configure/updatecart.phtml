@@ -1,0 +1,18 @@
+<div class="pull-left">
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Update Cart'); ?>
+<?php if($_product->isSaleable()): ?>      
+        <?php if(!$_product->isGrouped()): ?>
+          <div class="pull-left">
+            <label for="qty"><?php echo $this->__('Quantity') ?></label>
+            <input type="text" name="qty" id="qty"  maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Quantity:') ?>" class="input-text qty" />
+          </div> <!--pull-left-->
+          <div class="custom pull-left">
+            <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="icon-angle-up">&nbsp;</i></button>
+            <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="icon-angle-down">&nbsp;</i></button>
+          </div> <!--custom pull-left-->
+        <?php endif; ?>        
+        <?php echo $this->getChildHtml('', true, true) ?>       
+<?php endif; ?>
+     <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><?php echo $buttonTitle ?></span></button>  
+</div> <!--pull-left-->

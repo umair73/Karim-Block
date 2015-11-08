@@ -1,0 +1,101 @@
+/* slide-show */
+/* Slider */
+
+
+.slides_container {
+	width: 870px;
+	height:300px;
+	position: relative;
+	padding-left: 0px;
+	background:#f3f7f9;
+}
+.slides_container div {
+	width: 870px;
+	height: 300px;
+	display: block;
+	position: relative;
+	z-index: 20;
+}
+.slides_container div img {
+	z-index: 20;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.slides_container div p {
+	z-index: 40;
+	position: absolute;
+	top: 124px;
+	left: 246px;
+	padding-right: 10px;
+	color: #560e78;
+	font-size: 14px;
+}
+#slides {
+	position: relative;
+	overflow: hidden;width: 870px;
+}
+#slides a.prev {
+	z-index: 50;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 8px 6px 10px 5px;
+	color: #222;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out; font-size:0px;
+	 height:30px;
+	 width:35px;
+	 text-align:center;
+	 border-radius:0px;
+	 background:#fff;
+	 opacity:0.5;border:2px #ddd solid;
+}
+#slides a.prev:before {content:'\f104'; font-size:30px; font-family:FontAwesome; font-weight:normal; line-height:normal;}
+
+
+#slides a.prev:hover {
+	background: #222;
+	opacity:1; border:2px #ddd solid; color: #fff;
+}
+#slides a.next {
+	z-index: 50;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 8px 6px 10px 5px;
+	color: #222;
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	-webkit-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	transition:all 0.2s ease-out;
+	 font-size:0px;
+	 height:30px;
+	 width:35px;
+	 text-align:center;
+	 border-radius:0px;
+	  opacity:0.5;
+	  background: #fff; border:2px #ddd solid;
+	 
+}
+
+#slides a.next:before {content:'\f105'; font-size:30px; font-family:FontAwesome; font-weight:normal; line-height:normal;}
+
+#slides a.next:hover {
+	background: #222;
+	opacity:1;border:2px #ddd solid; color: #fff;
+}
+.slides_container div p {
+	top: 175px;
+	left: 320px;
+}
+#slides a.prev,
+#slides a.next {
+	margin:125px 6px 0px 5px;
+}

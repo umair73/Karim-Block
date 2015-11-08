@@ -1,0 +1,845 @@
+/* Slideshow wrapper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.the-slideshow-wrapper {
+}
+.the-slideshow-wrapper:after {
+	display:block;
+	content:".";
+	clear:both;
+	font-size:0;
+	line-height:0;
+	height:0;
+	overflow:hidden;
+}
+/* Slideshow
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.the-slideshow {
+	margin:0 auto;
+}
+.the-slideshow .slides {
+	display: none;
+}
+/* Owl Carousel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel {
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper {
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight {
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+.owl-carousel .owl-item {
+	float: left;
+}
+.owl-controls .owl-page, .owl-controls .owl-buttons div {
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* fix */
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}
+/* CSS3 Transitions */
+
+.owl-origin {
+	-webkit-perspective: 1200px;
+	-webkit-perspective-origin-x : 50%;
+	-webkit-perspective-origin-y : 50%;
+	-moz-perspective : 1200px;
+	-moz-perspective-origin-x : 50%;
+	-moz-perspective-origin-y : 50%;
+	perspective : 1200px;
+}
+/* fade */
+.owl-fade-out {
+	z-index: 10;
+ -webkit-animation: fadeOut .7s both ease;
+ -moz-animation: fadeOut .7s both ease;
+ animation: fadeOut .7s both ease;
+}
+.owl-fade-in {
+ -webkit-animation: fadeIn .7s both ease;
+ -moz-animation: fadeIn .7s both ease;
+ animation: fadeIn .7s both ease;
+}
+/* backSlide */
+.owl-backSlide-out {
+	-webkit-animation: backSlideOut 1s both ease;
+	-moz-animation: backSlideOut 1s both ease;
+	animation: backSlideOut 1s both ease;
+}
+.owl-backSlide-in {
+	-webkit-animation: backSlideIn 1s both ease;
+	-moz-animation: backSlideIn 1s both ease;
+	animation: backSlideIn 1s both ease;
+}
+/* goDown */
+.owl-goDown-out {
+ -webkit-animation: scaleToFade .7s ease both;
+ -moz-animation: scaleToFade .7s ease both;
+ animation: scaleToFade .7s ease both;
+}
+.owl-goDown-in {
+ -webkit-animation: goDown .6s ease both;
+ -moz-animation: goDown .6s ease both;
+ animation: goDown .6s ease both;
+}
+/* scaleUp */
+.owl-fadeUp-in {
+ -webkit-animation: scaleUpFrom .5s ease both;
+ -moz-animation: scaleUpFrom .5s ease both;
+ animation: scaleUpFrom .5s ease both;
+}
+.owl-fadeUp-out {
+ -webkit-animation: scaleUpTo .5s ease both;
+ -moz-animation: scaleUpTo .5s ease both;
+ animation: scaleUpTo .5s ease both;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+ 0% {
+opacity: 1
+}
+}
+@-moz-keyframes empty {
+ 0% {
+opacity: 1
+}
+}
+@keyframes empty {
+ 0% {
+opacity: 1
+}
+}
+@-webkit-keyframes fadeIn {
+ 0% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+@-moz-keyframes fadeIn {
+ 0% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+@keyframes fadeIn {
+ 0% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+@-webkit-keyframes fadeOut {
+ 0% {
+opacity:1;
+}
+ 100% {
+opacity:0;
+}
+}
+@-moz-keyframes fadeOut {
+ 0% {
+opacity:1;
+}
+ 100% {
+opacity:0;
+}
+}
+@keyframes fadeOut {
+ 0% {
+opacity:1;
+}
+ 100% {
+opacity:0;
+}
+}
+@-webkit-keyframes backSlideOut {
+ 25% {
+opacity: .5;
+-webkit-transform: translateZ(-500px);
+}
+ 75% {
+opacity: .5;
+-webkit-transform: translateZ(-500px) translateX(-200%);
+}
+ 100% {
+opacity: .5;
+-webkit-transform: translateZ(-500px) translateX(-200%);
+}
+}
+@-moz-keyframes backSlideOut {
+ 25% {
+opacity: .5;
+-moz-transform: translateZ(-500px);
+}
+ 75% {
+opacity: .5;
+-moz-transform: translateZ(-500px) translateX(-200%);
+}
+ 100% {
+opacity: .5;
+-moz-transform: translateZ(-500px) translateX(-200%);
+}
+}
+@keyframes backSlideOut {
+ 25% {
+opacity: .5;
+transform: translateZ(-500px);
+}
+ 75% {
+opacity: .5;
+transform: translateZ(-500px) translateX(-200%);
+}
+ 100% {
+opacity: .5;
+transform: translateZ(-500px) translateX(-200%);
+}
+}
+@-webkit-keyframes backSlideIn {
+ 0%, 25% {
+opacity: .5;
+-webkit-transform: translateZ(-500px) translateX(200%);
+}
+ 75% {
+opacity: .5;
+-webkit-transform: translateZ(-500px);
+}
+ 100% {
+opacity: 1;
+-webkit-transform: translateZ(0) translateX(0);
+}
+}
+@-moz-keyframes backSlideIn {
+ 0%, 25% {
+opacity: .5;
+-moz-transform: translateZ(-500px) translateX(200%);
+}
+ 75% {
+opacity: .5;
+-moz-transform: translateZ(-500px);
+}
+ 100% {
+opacity: 1;
+-moz-transform: translateZ(0) translateX(0);
+}
+}
+@keyframes backSlideIn {
+ 0%, 25% {
+opacity: .5;
+transform: translateZ(-500px) translateX(200%);
+}
+ 75% {
+opacity: .5;
+transform: translateZ(-500px);
+}
+ 100% {
+opacity: 1;
+transform: translateZ(0) translateX(0);
+}
+}
+@-webkit-keyframes scaleToFade {
+ to {
+opacity: 0;
+-webkit-transform: scale(.8);
+}
+}
+@-moz-keyframes scaleToFade {
+ to {
+opacity: 0;
+-moz-transform: scale(.8);
+}
+}
+@keyframes scaleToFade {
+ to {
+opacity: 0;
+transform: scale(.8);
+}
+}
+@-webkit-keyframes goDown {
+ from {
+-webkit-transform: translateY(-100%);
+}
+}
+@-moz-keyframes goDown {
+ from {
+-moz-transform: translateY(-100%);
+}
+}
+@keyframes goDown {
+ from {
+transform: translateY(-100%);
+}
+}
+ @-webkit-keyframes scaleUpFrom {
+ from {
+opacity: 0;
+-webkit-transform: scale(1.5);
+}
+}
+@-moz-keyframes scaleUpFrom {
+ from {
+opacity: 0;
+-moz-transform: scale(1.5);
+}
+}
+@keyframes scaleUpFrom {
+ from {
+opacity: 0;
+transform: scale(1.5);
+}
+}
+ @-webkit-keyframes scaleUpTo {
+ to {
+opacity: 0;
+-webkit-transform: scale(1.5);
+}
+}
+@-moz-keyframes scaleUpTo {
+ to {
+opacity: 0;
+-moz-transform: scale(1.5);
+}
+}
+@keyframes scaleUpTo {
+ to {
+opacity: 0;
+transform: scale(1.5);
+}
+}
+/* Generic arrows 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.slider-arrows1 .owl-controls .owl-buttons {
+	position:absolute;
+}
+.slider-arrows1 .owl-controls .owl-buttons div {
+	float:left;
+	display:block;
+	width:30px;
+	height:30px;
+	background-image:url(../images/slider-arrows.png);
+	background-repeat:no-repeat;
+	background-color:#e5e5e5;
+	cursor:pointer;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	transition:			opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-moz-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-webkit-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-o-transition:		opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons div:hover {
+	background-color:#333;
+}
+.slider-arrows1 .owl-controls .owl-buttons div.disabled {
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	cursor:default;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons div.disabled:hover {
+	background-color:#e5e5e5; /* Must be the same as default color */
+}
+.slider-arrows1 .owl-controls .owl-buttons .owl-prev {
+	background-position:-10px -10px;
+	margin-right:1px;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons .owl-prev:hover {
+	background-position:-10px -60px;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons .owl-prev.disabled:hover {
+	background-position:-10px -10px; /* Same as default */
+}
+.slider-arrows1 .owl-controls .owl-buttons .owl-next {
+	background-position:-60px -10px;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons .owl-next:hover {
+	background-position:-60px -60px;
+}
+.slider-arrows1 .owl-controls.clickable .owl-buttons .owl-next.disabled:hover {
+	background-position:-60px -10px; /* Same as default */
+}
+/* Position */
+.slider-arrows1-pos-top-right .owl-controls .owl-buttons {
+	top:-40px;
+	right:0px;
+}
+.slider-arrows1-pos-top-left .owl-controls .owl-buttons {
+	top:-40px;
+	left:0px;
+}
+/* Generic arrows 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.slider-arrows2 .owl-controls .owl-buttons div {
+	position:absolute;
+	display:block;
+	width:50px;
+	height:50px;
+	background-image:url(../images/slider-arrows.png);
+	background-repeat:no-repeat;
+	background-color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	transition:			opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-moz-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-webkit-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-o-transition:		opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	/* Fix: opacity transition disabled for Firefox to prevent possible glitches during animation */
+	
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.slider-arrows2:hover .owl-controls .owl-buttons div {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.slider-arrows2 .owl-controls.clickable .owl-buttons div:hover {
+	background-color:#000;
+}
+.slider-arrows2 .owl-controls .owl-buttons .owl-prev {
+	background-position:-2px 0;
+	left:0;
+	top:44%;
+}
+.slider-arrows2 .owl-controls.clickable .owl-buttons .owl-prev:hover {
+	background-position:-2px -50px;
+}
+.slider-arrows2 .owl-controls .owl-buttons .owl-next {
+	background-position:-48px 0;
+	right:0;
+	top:44%;
+}
+.slider-arrows2 .owl-controls.clickable .owl-buttons .owl-next:hover {
+	background-position:-48px -50px;
+}
+/* Generic arrows 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.slider-arrows3 .owl-controls .owl-buttons div {
+	position:absolute;
+	display:block;
+	width:30px;
+	height:30px;
+	background-image:url(http://ultimo.infortis-themes.com/demo/skin/frontend/ultimo/default/images/infortis/_shared/slider-arrows.png);
+	background-repeat:no-repeat;
+	background-color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+	text-indent:-999px;
+	overflow:hidden;
+	transition:			opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-moz-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-webkit-transition:	opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+	-o-transition:		opacity 300ms ease-in-out, background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons div:hover {
+	background-color:#000;
+}
+.slider-arrows3 .owl-controls .owl-buttons div.disabled {
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	cursor:default;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons div.disabled:hover {
+	background-color:#fff; /* Must be the same as default color */
+}
+.slider-arrows3 .owl-controls .owl-buttons .owl-prev {
+	background-position:-10px -10px;
+	top:30%;
+	left:-32px;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons .owl-prev:hover {
+	background-position:-10px -60px;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons .owl-prev.disabled:hover {
+	background-position:-10px -10px; /* Same as default */
+}
+.slider-arrows3 .owl-controls .owl-buttons .owl-next {
+	background-position:-60px -10px;
+	top:30%;
+	right:-32px;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons .owl-next:hover {
+	background-position:-60px -60px;
+}
+.slider-arrows3 .owl-controls.clickable .owl-buttons .owl-next.disabled:hover {
+	background-position:-60px -10px; /* Same as default */
+}
+/* Position */
+
+
+/* Generic pagination 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.slider-pagination1 .owl-controls .owl-page {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+ *display: inline;/*IE7 life-saver */
+}
+.slider-pagination1 .owl-controls .owl-page span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 7px 7px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color:#eee;
+	transition:			background-color 300ms ease-in-out;
+	-moz-transition:	background-color 300ms ease-in-out;
+	-webkit-transition:	background-color 300ms ease-in-out;
+	-o-transition:		background-color 300ms ease-in-out;
+}
+.slider-pagination1 .owl-controls.clickable .owl-page:hover span {
+	background-color:#000;
+}
+.slider-pagination1 .owl-controls .owl-page.active span {
+	background-color:#ccc;
+}
+/* Generic pagination 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.slider-pagination2 .owl-controls .owl-page {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+ *display: inline;/*IE7 life-saver */
+}
+.slider-pagination2 .owl-controls .owl-page span {
+	display: block;
+	background-color:#666;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	width:16px;
+	height:5px;
+	margin:5px;
+	transition:			background-color 300ms ease-in-out;
+	-moz-transition:	background-color 300ms ease-in-out;
+	-webkit-transition:	background-color 300ms ease-in-out;
+	-o-transition:		background-color 300ms ease-in-out;/*	transition:			width 300ms ease-in-out, height 300ms ease-in-out, margin 300ms ease-in-out, background-color 300ms ease-in-out;
+	-moz-transition:	width 300ms ease-in-out, height 300ms ease-in-out, margin 300ms ease-in-out, background-color 300ms ease-in-out;
+	-webkit-transition:	width 300ms ease-in-out, height 300ms ease-in-out, margin 300ms ease-in-out, background-color 300ms ease-in-out;
+	-o-transition:		width 300ms ease-in-out, height 300ms ease-in-out, margin 300ms ease-in-out, background-color 300ms ease-in-out;*/
+}
+.slider-pagination2 .owl-controls.clickable .owl-page:hover span, .slider-pagination2 .owl-controls .owl-page.active span {
+	width:16px;
+	height:5px;
+	margin:5px;
+	background-color:#222;
+}
+/* Pagination position
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.pagination-pos-bottom-centered {
+	padding-bottom: 50px; /* Additional space for bottom pagination */
+}
+.pagination-pos-bottom-centered .owl-pagination {
+	padding: 10px 0;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+}
+.pagination-pos-bottom-right .owl-pagination {
+	padding: 10px 0;
+	float: right;
+}
+.pagination-pos-bottom-left .owl-pagination {
+	padding: 10px 0;
+	float: left;
+}
+/* Over the slider */
+.pagination-pos-over-bottom-centered .owl-pagination {
+	text-align: center;
+	margin-top: -35px;
+	position: absolute;
+	width: 100%;
+}
+.pagination-pos-over-bottom-right .owl-pagination {
+	position:absolute;
+	bottom:3.5%;
+	right:1.5%;
+}
+.pagination-pos-over-bottom-left .owl-pagination {
+	position:absolute;
+	bottom:3.5%;
+	left:47%;
+}
+/* Caption
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.caption {
+	display: block;
+	position: relative;
+	bottom: 0;
+	width: 1120px;
+	margin: auto;
+	padding: 0;
+	padding-top: 100px;
+	overflow: hidden;
+	}
+.caption .caption-inner {
+	padding: 10px 0px;
+	text-align: center;
+	}
+	
+.dark2{width:360px; left:300px!important; padding:10px 30px; top:30px; background:rgba(0, 0, 0, 0.3); border-radius:250px; height:405px }	
+	
+/* Caption position
+-------------------------------------------------------------- */
+.caption.top {
+	top:0;
+	bottom:auto;
+	width:80%;
+}
+.caption.top-right {
+	top: 0;
+	bottom: auto;
+	right: 0;
+	padding-top: 4%;
+	}
+.caption.top-left {
+	top: 0;
+	bottom: auto;
+	right: 0;
+	width: 57%;
+	float: left;
+	padding-top: 12%;
+	padding-left: 9%;
+	}
+.caption.bottom-right {
+	right:0;
+	width:58%;
+}
+/* Caption elements
+-------------------------------------------------------------- */
+.caption > * {
+	float:left;
+	display:inline-block;
+	margin-bottom:1px;
+}
+.caption .heading {
+	padding:0;
+	margin-bottom:0.2em;
+	font-size:58px;
+	line-height:1em;
+	font-weight:900;
+	text-transform:uppercase;
+	letter-spacing:10px;
+	padding-bottom:10px;
+	
+}
+.caption p{
+	clear:left;
+	padding:15px 0px;
+	margin-bottom:1px;
+	font-size:28px;
+	line-height:1em;
+	font-weight:300;
+	text-transform:uppercase;
+	letter-spacing:10px;
+	color:#666 !important
+}
+.caption .intro-btn {
+	margin-top:10px;
+	display:block;
+}
+.caption .intro-btn a {
+	color:#fff;
+	padding:10px 20px;
+	letter-spacing:2px;
+	font-size:20px;
+	font-weight:300;
+	background:rgba(0, 0, 0, 0.8)
+}
+.caption .normal-text {
+	font-size:30px;
+	letter-spacing:6px;
+	color:#fff;
+	font-weight:normal;
+	padding-top:0px;
+	border-bottom:1px #666 solid;
+	margin-bottom:7px
+}
+
+.caption .normal-text1{
+	clear:left;
+	padding:15px 0px;
+	margin-bottom:1px;
+	font-size:26px;
+	line-height:1em;
+	font-weight:300;
+	text-transform:uppercase;
+	letter-spacing:10px;
+	color:#333 !important;
+	border-top:1px #666 solid;
+}
+
+/* Caption layout
+-------------------------------------------------------------- */
+.caption.centered {
+	text-align: center;
+}
+.caption.centered > * {
+	display:inline-block;
+	float: none;
+}
+/* Floating (text alignment) */
+.caption.right > * {
+	text-align:right;
+	float:right !important;
+}
+/* Caption additional styles
+-------------------------------------------------------------- */
+/* Width */
+.caption.full-width {
+	width:88%;
+	margin:6%;
+}
+.caption.narrow {
+	width:38%;
+}
+/* Prevent from hiding elements of the caption on narrow screens */
+.caption .permanent {
+	display:inline-block !important;
+}
+/* Skin
+-------------------------------------------------------------- */
+.caption .heading, .caption p {
+	transition:			color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-moz-transition:	color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-webkit-transition:	color 450ms ease-in-out, background-color 450ms ease-in-out;
+	-o-transition:		color 450ms ease-in-out, background-color 450ms ease-in-out;
+}
+a:hover .caption .heading, a:hover .caption p {
+	transition:			color 200ms ease-in-out, background-color 200ms ease-in-out;
+	-moz-transition:	color 200ms ease-in-out, background-color 200ms ease-in-out;
+	-webkit-transition:	color 200ms ease-in-out, background-color 200ms ease-in-out;
+	-o-transition:		color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+/* Dark + white text */
+.caption.dark1 .heading, .caption.dark1 p {
+	background-color:rgba(0, 0, 0, 0.35);
+	color:#fff;
+}
+a:hover .caption.dark1 .heading, a:hover .caption.dark1 p {
+	background-color:rgba(0, 0, 0, 0.7);
+	color:#fff;
+}
+/* Dark + white text */
+.caption.dark2 .heading {
+	padding: 10px;
+	margin-bottom: 0em;
+	font-size: 48px;
+	line-height: 1em;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing:5px;
+	padding-bottom: 10px;
+	color: #fff;
+	text-align:center;
+	padding-top:50px
+
+	}
+	
+.caption.dark2 .intro-btn a{text-align:center; display:inline-block; float:none}
+	
+.caption.dark2 .permanent {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #fff!important;
+	text-align:center;
+	border-top:1px #fff solid;
+	margin-top:5px
+	}
+a:hover .caption.dark2 .heading, a:hover .caption.dark2 p {
+	color:#fff;
+}
+/* Dark + white text */
+.caption.dark3 .heading, .caption.dark3 p {
+	background-color:rgba(0, 0, 0, 0.65);
+	color:#fff;
+}
+a:hover .caption.dark3 .heading, a:hover .caption.dark3 p {
+	background-color:rgba(0, 0, 0, 1);
+	color:#fff;
+}
+/* Light + black text */
+.caption.light1 .heading, .caption.light1 p {
+	color:rgba(0, 0, 0, 0.8);
+}
+a:hover .caption.light1 .heading, a:hover .caption.light1 .btn-intro {
+	background-color:rgba(255, 255, 255, 0.7);
+	color:#fff;
+}
+/* Light + black text */
+.caption.light2 .heading, .caption.light2 p {
+	background-color:rgba(255, 255, 255, 0.6);
+	color:#000;
+}
+a:hover .caption.light2 .heading, a:hover .caption.light2 p {
+	background-color:rgba(255, 255, 255, 0.85);
+	color:#000;
+}
+/* Light + black text */
+.caption.light3 .heading, .caption.light3 p {
+	background-color:rgba(255, 255, 255, 0.8);
+	color:#000;
+}
+a:hover .caption.light3 .heading, a:hover .caption.light3 p {
+	background-color:rgba(255, 255, 255, 1);
+	color:#000;
+}

@@ -1,0 +1,34 @@
+
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+
+<body class="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_appearance/width'); echo $this->getBodyClass()?' '.$this->getBodyClass().'':'' ?>" itemscope itemtype="http://schema.org/WebPage">
+<!-- BEGIN PAGE -->
+    <?php echo $this->getChildHtml('after_body_start') ?>
+    <?php echo $this->getChildHtml('global_notices') ?>      
+       <?php echo $this->getChildHtml('header') ?> 
+<!-- BEGIN MAIN CONTAINER COL1 LAYOUT -->     
+            <div class="main-col">
+                <div class="home-tabs">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+            </div> <!--main-col-->
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+        <?php echo $this->getAbsoluteFooter() ?>
+
+<!-- Home page newsletter -->
+<?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml() ; ?>
+
+</body>
+</html>

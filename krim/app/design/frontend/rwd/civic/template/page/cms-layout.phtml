@@ -1,0 +1,50 @@
+
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+
+<body class="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_appearance/width'); echo $this->getBodyClass()?' '.$this->getBodyClass().'':'' ?>" itemscope itemtype="http://schema.org/WebPage">
+<!-- BEGIN PAGE -->
+    <?php echo $this->getChildHtml('after_body_start') ?>
+    <?php echo $this->getChildHtml('global_notices') ?>      
+       <?php echo $this->getChildHtml('header') ?> 
+<!-- Home Free Shipping Banner Block -->
+       <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_home_freeshipping_banner_block')->toHtml() ?>
+<!-- HOME PAGE SLIDER -->
+       <?php echo $this->getLayout()->createBlock('catalog/product')->setTemplate('catalog/product/slider.phtml')->toHtml() ; ?>
+<!-- Home Featured Block -->
+       <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_home_featured_block')->toHtml() ?>
+<!-- BEGIN MAIN CONTAINER COL1 LAYOUT -->     
+            <div class="main-col">
+                <div class="home-tabs">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+            </div> <!--main-col-->
+            <!-- Home Lastest Blog Block -->
+            <section><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_home_latest_blog_block')->toHtml() ?></section>
+            <!-- Home Testimonial Block -->
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_home_testimonial_block')->toHtml() ?>
+            <!-- Home offer banner block -->
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_home_offer_banner_block')->toHtml() ?>
+            <!-- Logo Brand Section -->
+            <section><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_logo_brand_block')->toHtml() ?></section>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+        <?php echo $this->getAbsoluteFooter() ?>
+
+<!-- Home page newsletter -->
+<?php if(Mage::app()->getStore()->getConfig('civicsettings/civicsettings_newsletterpopup/newsletterpopup_enable')==1){?>
+    <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml() ; ?>
+<?php } ?>
+
+</body>
+</html>

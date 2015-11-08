@@ -1,0 +1,108 @@
+<?php $footer_type = Mage::getStoreConfig('civicsettings/civicsettings_appearance/footer'); ?>
+<!-- BEGIN FOOTER -->
+<footer>
+  <div class="footer-<?php echo $footer_type;?>">
+        <?php switch ($footer_type) {
+            case 'informative' :
+                ?>
+<div class="footer-newsletter">
+  <div class="inner">
+    <?php echo $this->getChildHtml('footerNewsletter'); ?>
+
+    <?php if (Mage::getStoreConfig('civicsettings/civicsettings_social/social_link')) { ?>
+      <div class="social">
+        <ul class="link">
+            <?php if (Mage::getStoreConfig('civicsettings/civicsettings_social/facebook_social_link')) { ?>
+          <li class="fb"><a  target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/facebook_social_link_path') ?>" title="<?php echo $this->__('Facebook');?>"></a></li>
+        <?php } if (Mage::getStoreConfig('civicsettings/civicsettings_social/twitter_social_link')) {?>
+            <li class="tw"><a target="_blank" rel="nofollow"  href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/twitter_social_link_path') ?>" title="<?php echo $this->__('Twitter');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/googleplus_social_link')) {
+        ?>
+           <li class="googleplus"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/googleplus_social_link_path') ?>" title="<?php echo $this->__('GooglePlus');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/rss_social_link')) {
+        ?>
+          <li class="rss"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/rss_social_link_path') ?>" title="<?php echo $this->__('RSS');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/pinterest_social_link')) {
+        ?>
+            <li class="pintrest"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/pinterest_social_link_path') ?>" title="<?php echo $this->__('PInterest');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/linkedin_social_link')) {
+        ?>
+             <li class="linkedin"><a  target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/linkedin_social_link_path') ?>" title="<?php echo $this->__('Linkedin');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/youtube_social_link')) {
+        ?>
+           <li class="youtube"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/youtube_social_link_path') ?>" title="<?php echo $this->__('Youtube');?>"></a></li>
+        <?php } ?>
+        </ul> <!--link-->
+      </div> <!--social-->
+    <?php } ?>
+
+  </div> <!--inner-->
+</div> <!--footer-newsletter-->
+
+<div class="inner">
+   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_footer_about_us_block')->toHtml() ?>
+   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_footer_information_links_block')->toHtml() ?>
+</div> <!--inner--> 
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_footer_links')->toHtml() ?>
+              
+                <?php
+                break;
+            case 'simple' :
+            default: ?>
+
+<div class="footer-newsletter">
+  <div class="inner">
+    <?php echo $this->getChildHtml('footerNewsletter'); ?>
+
+    <?php if (Mage::getStoreConfig('civicsettings/civicsettings_social/social_link')) { ?>
+      <div class="social">
+        <ul class="link">
+            <?php if (Mage::getStoreConfig('civicsettings/civicsettings_social/facebook_social_link')) { ?>
+          <li class="fb"><a  target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/facebook_social_link_path') ?>" title="<?php echo $this->__('Facebook');?>"></a></li>
+        <?php } if (Mage::getStoreConfig('civicsettings/civicsettings_social/twitter_social_link')) {?>
+            <li class="tw"><a target="_blank" rel="nofollow"  href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/twitter_social_link_path') ?>" title="<?php echo $this->__('Twitter');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/googleplus_social_link')) {
+        ?>
+           <li class="googleplus"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/googleplus_social_link_path') ?>" title="<?php echo $this->__('GooglePlus');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/rss_social_link')) {
+        ?>
+          <li class="rss"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/rss_social_link_path') ?>" title="<?php echo $this->__('RSS');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/pinterest_social_link')) {
+        ?>
+            <li class="pintrest"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/pinterest_social_link_path') ?>" title="<?php echo $this->__('PInterest');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/linkedin_social_link')) {
+        ?>
+             <li class="linkedin"><a  target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/linkedin_social_link_path') ?>" title="<?php echo $this->__('Linkedin');?>"></a></li>
+        <?php } 
+              if (Mage::getStoreConfig('civicsettings/civicsettings_social/youtube_social_link')) {
+        ?>
+           <li class="youtube"><a target="_blank" rel="nofollow" href="<?php echo Mage::getStoreConfig('civicsettings/civicsettings_social/youtube_social_link_path') ?>" title="<?php echo $this->__('Youtube');?>"></a></li>
+        <?php } ?>
+        </ul> <!--link-->
+      </div> <!--social-->
+    <?php } ?>
+
+  </div> <!--inner-->
+</div> <!--footer-newsletter-->
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('civic_footer_links')->toHtml() ?>
+
+           <?php     
+        }
+        ?> 
+    </div> <!--footer-->
+</footer> 
+
+<?php if (Mage::getStoreConfig('civicsettings/civicsettings_footer/footer_google_analytics')): ?>
+      <?php echo Mage::getStoreConfig('civicsettings/civicsettings_footer/footer_google_analytics_path') ?>       
+<?php endif; ?>

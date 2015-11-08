@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+<civic>
+    <cms>
+        <pages>
+            <item>
+                <title>Civic Home page</title>
+                <identifier>civic_home</identifier>
+                <content><![CDATA[
+<div class="producttabs">
+<div id="magik_producttabs1" class="magik-producttabs">
+<div class="magik-pdt-container">
+<div class="magik-pdt-nav">
+<ul class="pdt-nav">
+<li class="item-nav tab-loaded tab-nav-actived" data-href="pdt_best_sales" data-orderby="best_sales" data-catid="" data-type="order"><span class="title-navi">Best Sales </span></li>
+<li class="item-nav" data-href="pdt_new_arrivals" data-orderby="new_arrivals" data-catid="" data-type="order"><span class="title-navi">New Arrivals </span></li>
+<li class="item-nav" data-href="pdt_featured_pr" data-orderby="featured_pr" data-catid="" data-type="order"><span class="title-navi">Featured Products</span></li>
+</ul>
+</div>
+<div class="magik-pdt-content wide-4">{{block type="catalog/product_list" num_products="8" name="bestsellerproduct" as="bestsellerproduct" template="catalog/product/bestseller.phtml" }} {{block type="catalog/product_new" column_count="4" products_count="8" name="home.catalog.product.new" as="newproduct" template="catalog/product/new.phtml" }} {{block type="catalog/product_list" num_products="8" name="product_featured" as="product_featured" template="catalog/product/featured.phtml"}}</div>
+</div>
+</div>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>custom_static_page_one</root_template>
+            </item>
+            <item>
+                <title>Civic 404 No Route page</title>
+                <identifier>civic_no_route</identifier>
+                <content><![CDATA[<div class="login_page">
+<div class="page-title">
+<h3>Whoops, our bad...</h3>
+</div>
+<dl><dt>The page you requested was not found, and we have a fine guess why.</dt><dd>
+<ul class="disc">
+<li>If you typed the URL directly, please make sure the spelling is correct.</li>
+<li>If you clicked on a link to get here, the link is outdated.</li>
+</ul>
+</dd></dl>
+<p>&nbsp;</p>
+<dl><dt>What can you do?</dt><dd>Have no fear, help is near! There are many ways you can get back on track with Magento Demo Store.</dd><dd>
+<ul class="buttons">
+<li><button class="button" onclick="history.go(-1);"><span><span>Go back</span></span></button></li>
+<li><button class="button" onclick="location.href='{{store url=''}}'"><span><span>Store Home</span></span></button></li>
+<li><button class="button" onclick="location.href='{{store url='customer/account'}}'"><span><span>My Account</span></span></button></li>
+</ul>
+</dd></dl></div>]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+        </pages>
+        <blocks>            	        
+	        <item>
+                <title>Civic Footer links</title>
+                <identifier>civic_footer_links</identifier>
+                <content><![CDATA[<div class="footer-bottom">
+<div class="inner">
+<div class="coppyright">Copyright &copy; 2014. All Rights Reserved. Designed by <a href="http://www.magikcommerce.com">magikcommerce.com</a></div>
+<div class="bottom_links">
+<ul class="links">
+<li><a title="Magento Themes" href="http://www.magikcommerce.com/magento-themes-templates">Magento Themes</a></li>
+<li><a title="Responsive Themes" href="http://www.magikcommerce.com/magento-themes-templates/responsive-themes">Responsive Themes</a></li>
+<li class="last"><a title="Magento Extensions" href="http://www.magikcommerce.com/magento-extensions">Magento Extensions</a></li>
+</ul>
+</div>
+</div>
+</div>
+]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Custom Tab1</title>
+                <identifier>civic_custom_tab1</identifier>
+                <content><![CDATA[<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Custom Tab2</title>
+                <identifier>civic_custom_tab2</identifier>
+                <content><![CDATA[<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        
+	        <item>
+                <title>Empty Category</title>
+                <identifier>civic_empty_category</identifier>
+                <content><![CDATA[<p>There are no products matching the selection.<br/> This is a static CMS block displayed if category is empty. You can put your own content here.</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	    <item>
+                <title>Civic Logo Brand block</title>
+                <identifier>civic_logo_brand_block</identifier>
+                <content><![CDATA[<div class="brand-logo">
+<div class="jcarousel-skin-tango">
+<div class="new_title center">
+<h2><span>Logo Brands</span></h2>
+</div>
+<div id="mycarousel2" class="jcarousel-container jcarousel-container-horizontal">
+<div class="jcarousel-clip jcarousel-clip-horizontal">
+<ul class="jcarousel-list jcarousel-list-horizontal">
+<li><img src="{{skin url="images/b-logo1.png"}}" alt="b-logo1.png" /></li>
+<li><img src="{{skin url="images/b-logo2.png"}}" alt="b-logo2.png" /></li>
+<li><img src="{{skin url="images/b-logo3.png"}}" alt="b-logo3.png" /></li>
+<li><img src="{{skin url="images/b-logo4.png"}}" alt="b-logo4.png" /></li>
+<li><img src="{{skin url="images/b-logo5.png"}}" alt="b-logo5.png" /></li>
+<li><img src="{{skin url="images/b-logo6.png"}}" alt="b-logo6.png" /></li>
+<li><img src="{{skin url="images/b-logo3.png"}}" alt="b-logo3.png" /></li>
+<li><img src="{{skin url="images/b-logo2.png"}}" alt="b-logo2.png" /></li>
+<li><img src="{{skin url="images/b-logo5.png"}}" alt="b-logo5.png" /></li>
+<li><img src="{{skin url="images/b-logo4.png"}}" alt="b-logo4.png" /></li>
+<li><img src="{{skin url="images/b-logo1.png"}}" alt="b-logo1.png" /></li>
+<li><img src="{{skin url="images/b-logo2.png"}}" alt="b-logo2.png" /></li>
+<li><img src="{{skin url="images/b-logo3.png"}}" alt="b-logo3.png" /></li>
+<li><img src="{{skin url="images/b-logo4.png"}}" alt="b-logo4.png" /></li>
+<li><img src="{{skin url="images/b-logo5.png"}}" alt="b-logo5.png" /></li>
+<li><img src="{{skin url="images/b-logo6.png"}}" alt="b-logo6.png" /></li>
+<li><img src="{{skin url="images/b-logo3.png"}}" alt="b-logo3.png" /></li>
+<li><img src="{{skin url="images/b-logo2.png"}}" alt="b-logo2.png" /></li>
+<li><img src="{{skin url="images/b-logo5.png"}}" alt="b-logo5.png" /></li>
+<li><img src="{{skin url="images/b-logo4.png"}}" alt="b-logo4.png" /></li>
+</ul>
+</div>
+<div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;">&nbsp;</div>
+<div class="jcarousel-next jcarousel-next-horizontal" style="display: block;">&nbsp;</div>
+</div>
+</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Civic Store Logo</title>
+                <identifier>civic_logo</identifier>
+                <content><![CDATA[<img src="{{skin url="images/logo.png"}}" alt="Civic Store" />]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>       
+             
+             
+
+<item>
+                <title>Civic Footer Information Links Block</title>
+                <identifier>civic_footer_information_links_block</identifier>
+                <content><![CDATA[<div class="footer-column">
+<h4>Company</h4>
+<ul class="links">
+<li class="first"><a title="Features" href="#">Features</a></li>
+<li><a title="Blog" href="{{store_url=blog}}">Blog</a></li>
+<li><a title="Payment" href="#">Payment</a></li>
+<li><a title="Shipment&lt;/a&gt;" href="#">Shipment</a></li>
+<li><a title="FAQs" href="#">FAQs</a></li>
+<li class="last"><a title="Return policy" href="#">Return policy</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h4>Style Advisor</h4>
+<ul class="links">
+<li class="first"><a title="Your Account" href="#">Your Account</a></li>
+<li><a title="Information" href="#">Information</a></li>
+<li><a title="Addresses" href="#">Addresses</a></li>
+<li><a title="Addresses" href="#">Discount</a></li>
+<li><a title="Orders History" href="#">Orders History</a></li>
+<li class="last"><a title=" Additional Information" href="#">Additional Information</a></li>
+</ul>
+</div>
+<div class="footer-column-last">
+<h4>Information</h4>
+<ul class="links">
+<li class="first"><a title="Site Map" href="{{store_url=catalog/seo_sitemap/category/}}">Site Map</a></li>
+<li><a title="Search Terms" href="{{store_url=catalogsearch/term/popular/}}">Search Terms</a></li>
+<li><a title="Advanced Search" href="{{store_url=catalogsearch/advanced/}}">Advanced Search</a></li>
+<li><a title="Contact Us" href="{{store_url=contacts}}">Contact Us</a></li>
+<li><a title="Suppliers" href="#">Suppliers</a></li>
+<li class=" last"><a class="link-rss" title="Our stores" href="#">Our stores</a></li>
+</ul>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                                   
+            <item>
+                <title>Civic Footer About Us Block</title>
+                <identifier>civic_footer_about_us_block</identifier>
+                <content><![CDATA[<div class="footer-column-1">
+<h4>About Company</h4>
+<p>Our Company is a Magento product development and solutions company..</p>
+<address><em class="add-icon">&nbsp;</em>123 Main Street, Anytown, <br /> &nbsp;CA 12345 USA</address>
+<div class="phone-footer"><em class="phone-icon">&nbsp;</em> +1 800 123 1234</div>
+<div class="email-footer"><em class="email-icon">&nbsp;</em> <a href="mailto:support@magikcommerce.com">support@magikcommerce.com</a></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            
+           
+
+            <item>
+                <title>Civic Home Featured Block</title>
+                <identifier>civic_home_featured_block</identifier>
+                <content><![CDATA[<div class="offer-banner">
+<div class="offer-banner-section">
+<div class="col"><a href="#"><img src="{{skin url="images/prom-banner-women.png"}}" alt="prom-banner-women.png" /></a></div>
+<div class="col"><a href="#"><img src="{{skin url="images/prom-banner-electronics.png"}}" alt="prom-banner-electronics.png" /></a></div>
+<div class="col"><a href="#"><img src="{{skin url="images/promo-banner-men.png"}}" alt="promo-banner-men.png" /></a></div>
+<div class="col-last"><a href="#"><img src="{{skin url="images/promo-banner-furniture.png"}}" alt="promo-banner-furniture.png" /></a></div>
+</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            
+            <item>
+                <title>Civic Home Offer Banner Block</title>
+                <identifier>civic_home_offer_banner_block</identifier>
+                <content><![CDATA[<div class="banner-section">
+<div><img src="{{skin url="images/banner-bottom.png"}}" alt="banner bottom" /></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                        
+            <item>
+                <title>Civic Contact Us Static Block</title>
+                <identifier>civic_contact_us_static_block</identifier>
+                <content><![CDATA[<div class="block block-company">
+<div class="block-title">Company</div>
+<div class="block-content"><ol id="recently-viewed-items">
+<li class="item odd"><a href="#">About Us</a></li>
+<li class="item even"><a href="{{store_url=catalog/seo_sitemap/category/}}">Sitemap</a></li>
+<li class="item  odd"><a href="#">Terms of Service</a></li>
+<li class="item last"><a href="{{store_url=catalogsearch/term/popular/}}">Search Terms</a></li>
+</ol></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                                   
+            <item>
+                <title>Civic Toplinks Company Block</title>
+                <identifier>civic_toplinks_company_block</identifier>
+                <content><![CDATA[<div class="company">
+<div class="click-nav">
+<ul class="no-js">
+<li><a class="clicker" title="Company">Company <span class="caret">&nbsp;</span></a>
+<ul class="link">
+<li><a title="About Us" href="{{store_url=about-us}}">About Us</a></li>
+<li><a title="Customer Service" href="#">Customer Service</a></li>
+<li><a title="Privacy Policy" href="#">Privacy Policy</a></li>
+<li><a title="Site Map" href="{{store_url=catalog/seo_sitemap/category/}}"><span>Site Map</span></a></li>
+<li><a title="Search Terms" href="{{store_url=catalogsearch/term/popular/}}"><span>Search Terms</span></a></li>
+<li class="last"><a title="Advanced Search" href="{{store_url=catalogsearch/advanced/}}"><span>Advanced Search</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                       
+            <item>
+                <title>Civic Home Freeshipping Banner Block</title>
+                <identifier>civic_home_freeshipping_banner_block</identifier>
+                <content><![CDATA[<div class="prom-section">
+<div class="inner">
+<div class="col-info">Return &amp; Exchange in <span>3 working days</span></div>
+<div class="col-info">Get <span>15%</span> off when you spend over <span>$100</span></div>
+<div class="col-info-last">Free Shipping! <span> All Orders Over $299</span></div>
+</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            
+            <item>
+                <title>Civic Home Testimonial Block</title>
+                <identifier>civic_home_testimonial_block</identifier>
+                <content><![CDATA[<div class="testimonials">
+<div class="testimonials_RC">
+<div class="quote-box"><span class="quote-left">&nbsp;</span> <q>We had some issues concerning design &amp; layout. The support team was very helpful in adressing these issues. Great help! </q></div>
+<cite><span class="photo tina"><img src="{{skin url="images/photo-img1.png"}}" alt="testimonial photo" /> </span><span class="author">John Doe,</span> CEO, XYZ Softwear </cite></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                                    
+            <item>
+                <title>Civic Blog Banner Ad Block</title>
+                <identifier>civic_blog_banner_ad_block</identifier>
+                <content><![CDATA[<div class="ad-spots widget widget__sidebar">
+<h3 class="widget-title">Ad Spots</h3>
+<div class="widget-content"><a title="" href="#" target="_self"><img src="{{skin url="images/offer-banner1.jpg"}}" alt="offer banner" /></a></div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            
+            <item>
+                <title>Civic Blog Banner Text Block</title>
+                <identifier>civic_blog_banner_text_block</identifier>
+                <content><![CDATA[<div class="text-widget widget widget__sidebar">
+<h3 class="widget-title">Text Widget</h3>
+<div class="widget-content">Mauris at blandit erat. Nam vel tortor non quam scelerisque cursus. Praesent nunc vitae magna pellentesque auctor. Quisque id lectus.<br /> <br /> Massa, eget eleifend tellus. Proin nec ante leo ssim nunc sit amet velit malesuada pharetra. Nulla neque sapien, sollicitudin non ornare quis, malesuada.</div>
+</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            
+            <item>
+                <title>Civic Home Latest Blog Block</title>
+                <identifier>civic_home_latest_blog_block</identifier>
+                <content><![CDATA[<div>{{block type="blogmate/index" name="blog_home" template="blogmate/right/home_right.phtml"}}</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+                
+        </blocks>
+    </cms>
+</civic>
